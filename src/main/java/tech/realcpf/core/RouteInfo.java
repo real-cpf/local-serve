@@ -1,7 +1,11 @@
 package tech.realcpf.core;
 
+import java.util.Arrays;
+
 public class RouteInfo {
   private String plugName;
+  private String funcName;
+  private Object[] param;
 
   public String getPlugName() {
     return plugName;
@@ -27,6 +31,12 @@ public class RouteInfo {
     this.param = param;
   }
 
-  private String funcName;
-  private Object[] param;
+  @Override
+  public String toString() {
+    return "RouteInfo{" +
+      "plugName='" + plugName + '\'' +
+      ", funcName='" + funcName + '\'' +
+      ", param=" + Arrays.toString(param) +
+      '}';
+  }
 }

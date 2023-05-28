@@ -9,6 +9,7 @@ public class F1 implements CallFunc {
   @Override
   public CompletableFuture call(Object[] param) {
     final String s = String.format("f1:[%s]",Arrays.toString(param));
+    System.out.println(s);
     return CompletableFuture.supplyAsync(()->{
       return s;
     });
